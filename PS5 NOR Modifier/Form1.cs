@@ -86,7 +86,7 @@ namespace PS5_NOR_Modifier
             string[] ports = SerialPort.GetPortNames();
             comboComPorts.Items.Clear();
             comboComPorts.Items.AddRange(ports);
-            comboComPorts.SelectedIndex = 0;
+            if(comboComPorts.Items.Count > 0) comboComPorts.SelectedIndex = 0;
             btnConnectCom.Enabled = true;
             btnDisconnectCom.Enabled = false;
         }
@@ -829,7 +829,7 @@ namespace PS5_NOR_Modifier
             string[] ports = SerialPort.GetPortNames();
             comboComPorts.Items.Clear();
             comboComPorts.Items.AddRange(ports);
-            comboComPorts.SelectedIndex = 0;
+            if (comboComPorts.Items.Count > 0)  comboComPorts.SelectedIndex = 0;
             btnConnectCom.Enabled = true;
             btnDisconnectCom.Enabled = false;
         }
